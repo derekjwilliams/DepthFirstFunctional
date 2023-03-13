@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Depth First Graph Algorithm",
   "main": "depth_first_functional",
+  "type": "module",
   "scripts": {
     "test": "mocha tests/*.js"
   },
