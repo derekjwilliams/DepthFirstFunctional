@@ -1,0 +1,31 @@
+{
+  "name": "@derekjwilliams/depth_first_functional",
+  "version": "1.0.0",
+  "description": "Depth First Graph Algorithm",
+  "main": "depth_first_functional",
+  "scripts": {
+    "test": "mocha tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derekjwilliams/DepthFirstFunctional.git"
+  },
+  "keywords": [
+    "Graph",
+    "Algorithms",
+    "Functional"
+  ],
+  "author": "Derek Williams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/derekjwilliams/DepthFirstFunctional/issues"
+  },
+  "homepage": "https://github.com/derekjwilliams/DepthFirstFunctional#readme",
+  "devDependencies": {
+    "@types/mocha": "^10.0.1"
+  },
+  "dependencies": {
+    "@derekjwilliams/linkedstack": "^1.0.0",
+    "chai": "^4.3.7"
+  }
+}
