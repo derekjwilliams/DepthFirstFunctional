@@ -5,26 +5,12 @@
 /* simple JS implementation first, with functional stack implementation */
 import { stackPeek, stackPop, stackPush, stackGetIterator } from "@derekjwilliams/linkedstack";
 
-
 function Edge(from, to, cost) {
 	this.from = from
   this.to = to
 	this.cost = cost;
 }
 
-class EdgeClass {
-  /** @constructor
-  * @param {number} from 
-  * @param {number} to
-  * @param {number} cost
-  */
-    constructor(from, to, cost) {
-        this.from = from;
-        this.to = to;
-        this.cost = cost;
-      }
-  }
-  
 /**
  * Perform a depth first search on a graph with n vertices from a starting point to count the number of vertices in a given component
  * @param {Map<number, Array<Edge>>} graph 
