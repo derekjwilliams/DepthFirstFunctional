@@ -1,6 +1,6 @@
 {
   "name": "@derekjwilliams/depth_first_functional",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Depth First Graph Algorithm",
   "main": "depth_first_functional",
   "type": "module",
