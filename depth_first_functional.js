@@ -3,12 +3,13 @@
 // github for the tutorial https://github.com/williamfiset/algorithms
 
 /* simple JS implementation first, with functional stack implementation */
-import { stackPeek, stackPop, stackPush, stackGetIterator } from "@derekjwilliams/linkedstack";
+import { stackPeek, stackPop, stackPush, stackGetIterator } from "@derekjwilliams/linkedstack"
+import BitSet from "bitset"
 
 function Edge(from, to, cost) {
 	this.from = from
   this.to = to
-	this.cost = cost;
+	this.cost = cost
 }
 
 /**
@@ -19,14 +20,14 @@ function Edge(from, to, cost) {
  */
 export function depthFirstSearch(graph, start, vertexCount) {
 
-  let count = 0;
-  const visited = new Array(vertexCount)
-  let stack;
+  let count = 0
+  let visited = new BitSet
+  let stack
 
   // push the start vertex onto the stack
-  stack = stackPush(stack)(start); 
+  stack = stackPush(stack)(start)
   // Start by visiting the starting vertex
-  visited[start] = true;
+  visited.set(start, 1)
   while (stack !== undefined) { // while stack is not empty
     const vertex = stackPeek(stack)
     stack = stackPop(stack)
@@ -35,22 +36,22 @@ export function depthFirstSearch(graph, start, vertexCount) {
     if (edges != null) {
       edges.forEach((edge) => {
         // if the edge.to vertex is not in the array of visited then push onto the stack, and set to true in the visited array
-        if (!visited[edge.to]) {
+        if (!visited.get(edge.to)) {
           stack = stackPush(stack)(edge.to);
-          visited[edge.to] = true;
+          visited.set(edge.to, 1)
         }
       })
     }
   }
   return count
 }
-//example
+
 /**
- * Setup graph, by adding directed edges
- * @param {Map<number, Array<Edge>>} graph 
- * @param {number} from
- * @param {number} to
- * @param {number} cost
+ * Add directed edge to graph
+ * @param {Map} graph 
+ * @param {number} from 
+ * @param {number} to 
+ * @param {number} cost 
  */
 export function addDirectedEdge(graph, from, to, cost) {
   let edges = graph.get(from);
@@ -60,6 +61,19 @@ export function addDirectedEdge(graph, from, to, cost) {
   }
   edges.push(new Edge(from, to, cost));
 }
+
+/**
+ * syntactical sugar to add multiple edges
+ * @param {Map} graph 
+ * @param {Array<Object>} edgez 
+ */
+// 
+export function addDirectedEdges(graph, edgez) {
+  edgez.forEach((edge) => {
+    addDirectedEdge(graph, edge[0], edge[1], edge[2])
+  })
+}
+
   
   
   
