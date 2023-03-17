@@ -32,7 +32,7 @@ ASCII Art (sucks)
     (v3)
 ```     
 
-### 20 Vertex Graph
+### More Complex 7 Vertex Graph
 
 Graph for `Depth First Moderate` tests
 ```mermaid

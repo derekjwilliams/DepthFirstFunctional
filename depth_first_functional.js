@@ -1,6 +1,7 @@
 // perform a depth first search using adjacency list input and vertex to find
 // see https://youtu.be/09_LlHjoEiY?t=1400s
 // github for the tutorial https://github.com/williamfiset/algorithms
+// Java implementation from the github https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/graphtheory/DepthFirstSearchAdjacencyListIterativeFastStack.java
 
 /* simple JS implementation first, with functional stack implementation */
 import { stackPeek, stackPop, stackPush, stackGetIterator } from "@derekjwilliams/linkedstack"
