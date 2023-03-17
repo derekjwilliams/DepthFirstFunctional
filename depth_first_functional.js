@@ -65,11 +65,11 @@ export function addDirectedEdge(graph, from, to, cost) {
 /**
  * syntactical sugar to add multiple edges
  * @param {Map} graph 
- * @param {Array<Object>} edgez 
+ * @param {Array<Object>} edges 
  */
 // 
-export function addDirectedEdges(graph, edgez) {
-  edgez.forEach((edge) => {
+export function addDirectedEdges(graph, edges) {
+  edges.forEach((edge) => {
     addDirectedEdge(graph, edge[0], edge[1], edge[2])
   })
 }
